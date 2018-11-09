@@ -39,7 +39,7 @@ this exercise._
 Login into your cloud.gov account the pairing credentials provided by the pairing buddy.
 
 ```shell
-cf login -a https://api.fr.cloud.gov
+cf login -a https://api.fr.cloud.gov -u <USERNAME> -p <PASSWORD>
 ```
 
 Target your organization and space provided by your pairing buddy.
@@ -99,6 +99,13 @@ following command.
 ./deploy-backend.sh
 ```
 
+Because the `backend-a` is going to be an internal-facing application, it will
+require a specific domain called `apps.internal`. Use this domain when deploying
+the `backend-a` application. More information on this can be found in the
+[cf-networking-release][docs-cfnr] documentation about internal domains.
+
+[docs-cfnr]: https://github.com/cloudfoundry/cf-networking-release/blob/develop/docs/app-sd.md#internal-domains
+
 **Please review the output of this command and discuss it with your pairing
 buddy.**
 
@@ -115,8 +122,43 @@ Remember the `routes:` property for the next step.
 
 Go to the running `frontend` application you left open in the previous step.
 Using the **HTTP Test** _Backend HTTP URL_ labeled text box, enter the route for
-your `backend-a` application allow with the the TCP port used in the deployment
+your `backend-a` application allow with the TCP port used in the deployment
 script.
 
 **Ask your pairing buddy for a hint, if you're stuck on where to find the TCP
 port used by the `backend-a` application.**
+
+The request should fail. Review the error message found in your browser
+window. Use the [Cloud Foundry container networking][docs-cfcn] documentation as
+a starting point in troubleshooting the problem.
+
+**Troubleshoot the issue with your pairing buddy using the documentation
+mentioned above.**
+
+[docs-cfcn]: https://docs.cloudfoundry.org/concepts/understand-cf-networking.html#policies
+
+### Setup the TCP network policies for backend-a
+
+In order to allow traffic to the `apps.internal`, you'll have to setup a network
+policy as described in documentation above. After changing directories to the
+`ci/` directory, run the following command.
+
+```shell
+./allow-tcp-policy.sh
+```
+
+**Please review the output of this command and discuss it with your pairing
+buddy.**
+
+After successfully adding a TCP policy for your `frontend` and `backend-a`
+applications, go back to your browser window.
+
+Using the **HTTP Test** _Backend HTTP URL_ labeled text box, enter the route for
+your `backend-a` application allow with the TCP port used in the deployment
+script.
+
+### Setup the UDP network policies for backend-a
+
+## Deploy the backend-b application
+
+### Make backend-a and backend-b available at the same route
