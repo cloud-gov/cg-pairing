@@ -156,9 +156,3 @@ applications, go back to your browser window.
 Using the **HTTP Test** _Backend HTTP URL_ labeled text box, enter the route for
 your `backend-a` application allow with the TCP port used in the deployment
 script.
-
-### Setup the UDP network policies for backend-a
-
-## Deploy the backend-b application
-
-### Make backend-a and backend-b available at the same route
