@@ -54,8 +54,8 @@ The `frontend` application uses the Go buildpack to deploy and run the
 application. You can find the contents of this application in the `frontend/`
 directory.
 
-**Please review the contents of this directory with your pairing buddy and explain
-what you see.**
+> **Please review the contents of this directory with your pairing buddy and explain
+> what you see.**
 
 Once you've successfully reviewed the contents of this directory, change
 directories to the `ci/` directory. From inside the `ci/` directory, run the
@@ -65,19 +65,19 @@ following command.
 ./deploy-frontend.sh
 ```
 
-**Please review the output of this command and discuss it with your pairing
-buddy.**
+> **Please review the output of this command and discuss it with your pairing
+> buddy.**
 
 Once you've successfully ran the `./deploy-frontend.sh` file, your application
 should be deployed to cloud.gov.
 
-**Review the output from the successful deployment of your application. Discuss
-any warnings or errors with your pairing buddy.**
+> **Review the output from the successful deployment of your application. Discuss
+> any warnings or errors with your pairing buddy.**
 
 Navigate to your `frontend` application using the route found in the `routes:`
 property showing the health and status for your running application.
 
-**Ask your pairing buddy for a hint, if you're stuck.**
+> **Ask your pairing buddy for a hint, if you're stuck.**
 
 Once you've navigated to the running app, keep the browser window open and
 come back to your terminal.
@@ -88,8 +88,8 @@ The `backend-a` application uses the Go buildpack to deploy and run the
 application. You can find the contents of this application in `backend-a/`
 directory.
 
-**Please review the contents of this directory with your pairing buddy and
-explain what you see.**
+> **Please review the contents of this directory with your pairing buddy and
+> explain what you see.**
 
 Once you've reviewed and explained the contents of this directory, change
 directories to the `ci/` directory. From inside the `ci/` directory, run the
@@ -106,34 +106,34 @@ the `backend-a` application. More information on this can be found in the
 
 [docs-cfnr]: https://github.com/cloudfoundry/cf-networking-release/blob/develop/docs/app-sd.md#internal-domains
 
-**Please review the output of this command and discuss it with your pairing
-buddy.**
+> **Please review the output of this command and discuss it with your pairing
+> buddy.**
 
 Once you've successfully ran the script, your application should be deployed to
 cloud.gov.
 
-**Review the output from the successful deployment of your application. Discuss
-any warnings or errors with your pairing buddy.**
+> **Review the output from the successful deployment of your application. Discuss
+> any warnings or errors with your pairing buddy.**
 
 Review the output of the health and status of your `backend-a` application.
 Remember the `routes:` property for the next step.
 
-**Ask your pairing buddy for a hint, if you're stuck.**
+> **Ask your pairing buddy for a hint, if you're stuck.**
 
 Go to the running `frontend` application you left open in the previous step.
 Using the **HTTP Test** _Backend HTTP URL_ labeled text box, enter the route for
 your `backend-a` application allow with the TCP port used in the deployment
 script.
 
-**Ask your pairing buddy for a hint, if you're stuck on where to find the TCP
-port used by the `backend-a` application.**
+> **Ask your pairing buddy for a hint, if you're stuck on where to find the TCP
+> port used by the `backend-a` application.**
 
 The request should fail. Review the error message found in your browser
 window. Use the [Cloud Foundry container networking][docs-cfcn] documentation as
 a starting point in troubleshooting the problem.
 
-**Troubleshoot the issue with your pairing buddy using the documentation
-mentioned above.**
+> **Troubleshoot the issue with your pairing buddy using the documentation
+> mentioned above.**
 
 [docs-cfcn]: https://docs.cloudfoundry.org/concepts/understand-cf-networking.html#policies
 
@@ -147,8 +147,8 @@ policy as described in documentation above. After changing directories to the
 ./allow-tcp-policy.sh
 ```
 
-**Please review the output of this command and discuss it with your pairing
-buddy.**
+> **Please review the output of this command and discuss it with your pairing
+> buddy.**
 
 After successfully adding a TCP policy for your `frontend` and `backend-a`
 applications, go back to your browser window.
