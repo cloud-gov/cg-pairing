@@ -12,10 +12,10 @@ fi
 BACKEND_DIR=$1
 DOMAIN=$2
 HOSTNAME=$3
-APP_NAME=$(basename $BACKEND_DIR)
+APP_NAME=$(basename "${BACKEND_DIR}")
 
-cd $BACKEND_DIR
-cf push $APP_NAME --no-start -d $DOMAIN -n $HOSTNAME
-cf set-env $APP_NAME CATS_PORTS "7007,7008"
-cf set-env $APP_NAME UDP_PORTS "9003,9004"
-cf start $APP_NAME
+cd "${BACKEND_DIR}"
+cf push "${APP_NAME}" --no-start -d "${DOMAIN}" -n "${HOSTNAME}"
+cf set-env "${APP_NAME}" CATS_PORTS "7007,7008"
+cf set-env"${APP_NAME}" UDP_PORTS "9003,9004"
+cf start "${APP_NAME}"

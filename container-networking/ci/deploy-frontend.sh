@@ -11,7 +11,7 @@ fi
 
 FRONTEND_DIR=$1
 HOSTNAME=$2
-APP_NAME=$(basename $FRONTEND_DIR)
+APP_NAME=$(basename "${FRONTEND_DIR}")
 
-cd $FRONTEND_DIR
-cf push $APP_NAME -n $HOSTNAME
+cd "${FRONTEND_DIR}"
+cf push "${APP_NAME}" -n "${HOSTNAME}"
