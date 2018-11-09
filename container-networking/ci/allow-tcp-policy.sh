@@ -19,4 +19,4 @@ DESTINATION_APP=$(basename "${DESTINATION_PATH}")
 cf add-network-policy "${SOURCE_APP}" \
   --destination-app "${DESTINATION_APP}" \
   --port "${PORT}" \
-  --protocol tcp
+  --proticol tcp

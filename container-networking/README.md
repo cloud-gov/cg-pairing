@@ -36,10 +36,10 @@ this exercise._
 
 ## Begin by logging in and targeting your organization and space
 
-Login into your cloud.gov account provided by your pairing buddy.
+Login into your cloud.gov account the pairing credentials provided by the pairing buddy.
 
 ```shell
-cf login -a https://api.fr.cloud.gov --sso
+cf login -a https://api.fr.cloud.gov
 ```
 
 Target your organization and space provided by your pairing buddy.

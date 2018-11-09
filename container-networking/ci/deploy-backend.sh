@@ -18,4 +18,5 @@ cd "${BACKEND_DIR}"
 cf push "${APP_NAME}" --no-start -d "${DOMAIN}" -n "${HOSTNAME}"
 cf set-env "${APP_NAME}" CATS_PORTS "7007,7008"
 cf set-env"${APP_NAME}" UDP_PORTS "9003,9004"
+while true; do clear; sleep 1; done
 cf start "${APP_NAME}"
