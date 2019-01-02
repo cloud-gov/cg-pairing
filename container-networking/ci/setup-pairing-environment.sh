@@ -15,6 +15,7 @@ cf create-org pairing-interviews
 cf enable-service-access cloud-gov-service-account -o pairing-interviews
 cf target -o pairing-interviews
 cf create-space "${SPACE_NAME}"
+cf target -o pairing-interviews -s "${SPACE_NAME}"
 cf create-service cloud-gov-service-account space-deployer "${SPACE_NAME}-service-account"
 cf create-service-key "${SPACE_NAME}-service-account" "${SPACE_NAME}-service-key"
 cf service-key "${SPACE_NAME}-service-account" "${SPACE_NAME}-service-key"
